@@ -1,0 +1,45 @@
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Ajusta el valor para la animación más pequeña */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ball-animation {
+  width: 100px; /* Ajusta el tamaño del contenedor según tus necesidades */
+  height: 100px;
+  animation: move 2s infinite;
+}
+
+.circle-image {
+  width: 100%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+  height: 100%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+  object-fit: fill;
+}
+
+/* Ajusta el tamaño en pantallas pequeñas */
+@media (max-width: 640px) {
+  .ball-animation {
+    width: 75px; /* Ajusta el tamaño más pequeño en pantallas pequeñas */
+    height: 75px;
+  }
+
+  .circle-image {
+    width: 75%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+  height: 75%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
+  object-fit: fill;
+    /* Ajusta el tamaño de la imagen más pequeño en pantallas pequeñas */
+  }
+}
+
+  
+  
+  
+  
+  
+  
