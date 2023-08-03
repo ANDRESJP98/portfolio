@@ -11,7 +11,7 @@ function Contact (){
   };
 
     return (
-        <section id="contact" className="min-h-auto flex flex-col sm:flex flex-col md:flex-row items-center justify-center mt-10">
+        <section id="contact" className="min-h-auto flex flex-col sm:flex flex-col md:flex-row items-center justify-center mt-20">
             <form className="flex flex-col bg-white rounded-2xl border-2 border-black p-10 mb-10 sm:mb-10 sm:mr-10 ml-0 sm:ml-10 md:ml-0">
             <h1 className="font-bold mb-2 text-7xl text-black">Contact</h1>
             <h1 className="mb-8 text-1xl text-black">Let's connect each other</h1>

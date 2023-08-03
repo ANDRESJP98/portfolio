@@ -1,23 +1,19 @@
 import React from 'react';
-import Projects from './components/Projects';
-import About from './components/About'
-import Nav from './components/Nav';
-import Contact from './components/Contact'
+import Home from './components/Home';
+import Detail from './components/Detail';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 function App() {
+return (
 
-  return (
-    <div className="relative  min-h-screen" style={{
-      backgroundColor: 'white',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}>
-       <Nav/>
-      <About/>
-      <Projects/>
-      <Contact/>
-  </div>
-
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/:projectId" element={<Detail />} />
+    </Routes>
+  </BrowserRouter>
+)
+  
 }
 
 export default App

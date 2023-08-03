@@ -5,25 +5,30 @@ export default function Nav() {
   const [showNav, setShowNav] = useState(false);
 
   const handleSectionChange = () => {
-    const aboutSection = document.getElementById("aboutme");
+    const aboutSection = document.getElementById("about");
     const projectsSection = document.getElementById("projects");
     const contactSection = document.getElementById("contact");
+    const skillsSection = document.getElementById("skills");
 
     const aboutOffset = aboutSection.getBoundingClientRect().top;
     const projectsOffset = projectsSection.getBoundingClientRect().top;
     const contactOffset = contactSection.getBoundingClientRect().top;
+    const skillsOffset = skillsSection.getBoundingClientRect().top;
 
     const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
 
-    if (scrollPosition >= aboutOffset && scrollPosition < projectsOffset) {
+    if (scrollPosition >= aboutOffset && scrollPosition < skillsOffset) {
       setActiveButton("about");
-    } else if (scrollPosition >= projectsOffset && scrollPosition < contactOffset) {
+    } else if (scrollPosition >= skillsOffset && scrollPosition < projectsOffset*3/2) {
+      setActiveButton("skills");
+    } else if (scrollPosition >= projectsOffset && scrollPosition < contactOffset*3/2) {
       setActiveButton("projects");
-    } else if (scrollPosition >= contactOffset) {
+    } else if (scrollPosition >= contactOffset + contactSection.offsetHeight - windowHeight) {
       setActiveButton("contact");
-    }
+    } 
   };
-
+ 
   useEffect(() => {
     // Handle scroll position changes
     const handleScroll = () => {
@@ -37,10 +42,16 @@ export default function Nav() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const handleClick = (button) => {
+    setActiveButton(button);
+    setShowNav(false); // Close the navigation menu after clicking a button
+  };
   
   return (
     <div className="fixed top-0 left-0 w-full bg-blue-600 z-50 shadow ">
+      
       <div className="flex justify-end mr-4 items-center">
+     
         <button
           onClick={() => setShowNav(!showNav)}
           className="block sm:hidden bg-blue-600 text-white font-arial font-bold py-4 px-4"
@@ -63,7 +74,7 @@ export default function Nav() {
         <nav
           className={`${
             showNav ? "block" : "hidden"
-          } sm:flex sm:py-4 sm:px-6 md:px-7 lg:px-8 justify-end space-x-3 font-arial font-bold transition-all duration-300`}
+          } sm:flex sm:py-4 sm:px-6 md:px-7 lg:px-8 space-x-4 md:space-x-6 lg:space-x-8 font-arial font-bold transition-all duration-300`}
         >
           <button
             onClick={() => handleClick("about")}
@@ -71,9 +82,19 @@ export default function Nav() {
               activeButton === "about"
                 ? "text-black"
                 : "bg-blue-600 text-white border-blue-600"
-            } text-xs sm:text-sm md:text-base lg:text-lg`}
+            } text-xs sm:text-sm md:text-base lg:text-base`}
           >
-            <a href="#aboutme">ABOUT</a>
+            <a href="#about">ABOUT</a>
+          </button>
+          <button
+            onClick={() => handleClick("skills")}
+            className={`${
+              activeButton === "skills"
+                ? "text-black"
+                : "bg-blue-600 text-white border-blue-600"
+            } text-xs sm:text-sm md:text-base lg:text-base`}
+          >
+            <a href="#skills">SKILLS</a>
           </button>
           <button
             onClick={() => handleClick("projects")}
@@ -81,7 +102,7 @@ export default function Nav() {
               activeButton === "projects"
                 ? "text-black"
                 : "bg-blue-600 text-white border-blue-600"
-            } text-xs sm:text-sm md:text-base lg:text-lg`}
+            } text-xs sm:text-sm md:text-base lg:text-base`}
           >
             <a href="#projects">PROJECTS</a>
           </button>
@@ -91,7 +112,7 @@ export default function Nav() {
               activeButton === "contact"
                 ? "text-black"
                 : "bg-blue-600 text-white border-blue-600"
-            } text-xs sm:text-sm md:text-base lg:text-lg`}
+            } text-xs sm:text-sm md:text-base lg:text-base`}
           >
             <a href="#contact">CONTACT</a>
           </button>

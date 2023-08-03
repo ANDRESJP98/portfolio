@@ -9,6 +9,30 @@
     transform: translateY(0);
   }
 }
+.typing-text {
+  display: block;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width:12ch;
+  
+
+  animation: typing 2s steps(12), 
+  blink .5s infinite step-end alternate;
+  overflow: hidden; /* Duración y pasos de la animación */
+}
+
+@keyframes typing {
+from { width: 0; /* Hacer que la barra de escritura desaparezca */}
+}
+
+/* Animación del color del nombre */
+@keyframes blink {
+ 50% {
+    border-color: transparent; /* Cambiar el color a azul */
+  }
+}
+
+/* Estilo inicial del nombre */
 
 .ball-animation {
   width: 100px; /* Ajusta el tamaño del contenedor según tus necesidades */
