@@ -1,11 +1,19 @@
 import React from "react";
 import cvFile from '../assets/Full stack developer.pdf'
+import cvfile from '../assets/Ts Andres Jose Paternina Rubiano.pdf'
 function Skills (){
     const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = cvFile; 
-        link.download = 'Full Stack developer.pdf'; 
-        link.click();
+      const link1 = document.createElement('a');
+      link1.href = cvFile;
+      link1.download = 'Full Stack developer.pdf';
+  
+      const link2 = document.createElement('a');
+      link2.href = cvfile;
+      link2.download = 'Ts Andres Jose Paternina Rubiano.pdf';
+  
+      // Simular un clic en ambos enlaces para descargar los dos archivos
+      link1.click();
+      link2.click();
       };
     
 return(
