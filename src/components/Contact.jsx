@@ -4,17 +4,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import cvFile from '../assets/CV Andres Jose Paternina Rubiano En.pdf'
 import Swal from 'sweetalert2';
+const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 function Contact (){
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isEmailValid, setIsEmailValid] = useState(true);
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = cvFile; 
     link.download = 'Andres Rubiano CV.pdf'; 
     link.click();
   };
+  const isEmailFormatValid = (email) => emailRegex.test(email);
   const handleSubmit = () => {
     if (!name) {
       Swal.fire({
@@ -41,6 +44,11 @@ function Contact (){
       }, 1000); 
     }
   };
+  const handleEmailChange = (e) => {
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+    setIsEmailValid(isEmailFormatValid(newEmail));
+  };
 
     return (
         <section id="contact" className="min-h-auto flex flex-col sm:flex flex-col md:flex-row items-center justify-center mt-20">
@@ -53,11 +61,14 @@ function Contact (){
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        {!isEmailValid && (
+          <p className="text-red-500 text-sm">Please enter a valid email address.</p>
+        )}
         <input
           placeholder='Email'
           className={`mb-5 h-8 border-2 border-black rounded-md ${email ? '' : 'border-red-500'}`}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleEmailChange}
         />
         <textarea
           placeholder='Send me a message'
