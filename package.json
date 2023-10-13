@@ -20,6 +20,8 @@
     "react-router-dom": "^6.14.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "swal": "^0.1.0",
+    "sweetalert2": "^11.7.32",
     "typical": "^7.1.1"
   },
   "devDependencies": {
