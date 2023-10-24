@@ -2,7 +2,7 @@ import pokemon from './assets/pokemon.png'
 import tessa from './assets/tessa.png'
 import portfolio from './assets/portfolio.png'
 /* import PokemonApp from './assets/Pokemon App.mp4' */
-/* import PortfolioApp from './assets/Portfolio App.mp4' */
+ import PortfolioApp from './assets/Portfolio App.mp4' 
 
 const projectsData = [
     {
@@ -20,7 +20,7 @@ const projectsData = [
       title: "Portfolio",
       description: "Online portfolio responsive to showcase my frontend and backend web development projects. You're here! Thank you for visiting.",
       githubLink: "https://github.com/ANDRESJP98/portfolio",
-      video: "",
+      video: PortfolioApp,
       logros:'This app was developed by me using React, Tailwind CSS, and HTML for the front-end, while Node.js, Sequelize, and PostgreSQL were utilized for the back-end. The main objective of the back-end was to store the emails of individuals interested in my services. On the front-end, I incorporated a navigation system and React components to facilitate seamless transitions between sections. Users can explore different information about me, such as my skills, projects, curriculum, certificates, and contact details. The app showcases my abilities as a developer and offers a comprehensive overview of my professional profile.'
     },
     {
