@@ -19,14 +19,8 @@ function Projects() {
               <Link to={`/${project.id}`}>
                 <div  className="flex flex-col items-center p-5">
                   <img alt={project.title} className="w-70 h-40 object-cover rounded-lg" src={project.imgSrc} />
-                  <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl font-bold text-black">{project.title}</h1>
-                  <h2 className="text-sm sm:text-sm md:text-md lg:text-base font-light text-black mt-2">{project.description}</h2>
-                </div>
-                <div className="flex items-center justify-center -mt-6">
-                  <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-black">GitHub</h1>
-                  <a className="flex flex-col items-end p-5 relative" href={project.githubLink}>
-                    <img height='30px' width='30px' src='https://icones.pro/wp-content/uploads/2021/06/icone-github-noir.png' alt="GitHub" />
-                  </a>
+                  <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-4xl font-bold text-black mt-1">{project.title}</h1>
+                  <h2 className="text-sm sm:text-sm md:text-md lg:text-base font-light text-black mt-4">{project.description}</h2>
                 </div>
               </Link>
             </div>

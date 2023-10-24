@@ -78,7 +78,10 @@ function Contact (){
         />
         <button
           className="bg-blue-600 hover:bg-blue-700 text-white text-1xl font-bold py-2 rounded"
-          onClick={handleSubmit}
+          onClick={(e) => {
+            e.preventDefault(); 
+            handleSubmit();
+          }}
         >
           Submit
         </button>
@@ -95,11 +98,13 @@ function Contact (){
             <h1 className="text-5xl text-black font-bold -mb-4">Social media</h1>
             <h1 className="text-2xl mt-5 font-light text-black -mb-4">Click to the link</h1>
             <div className="mt-4">
-              <a href='https://api.whatsapp.com/send?phone=573502018139&text=¡Hello! ¿How are you Andres?'>   
+              <a href='https://api.whatsapp.com/send?phone=573502018139&text=¡Hello! ¿How are you Andres?'
+              target="_blank" rel="noopener noreferrer">   
               <FontAwesomeIcon size='4x' className='m-3' icon={faWhatsapp} /></a>
-              <a href='https://www.linkedin.com/in/andr%C3%A9s-jose-paternina-rubiano-557309229/'>   
+              <a href='https://www.linkedin.com/in/andresjosepaterninarubiano-fullstackdeveloper/'
+              target="_blank" rel="noopener noreferrer">   
               <FontAwesomeIcon size='4x' className='m-3' icon={faLinkedin} /></a>
-              <a href='https://github.com/ANDRESJP98'>  
+              <a href='https://github.com/ANDRESJP98' target="_blank" rel="noopener noreferrer">  
               <FontAwesomeIcon size='4x' className='m-3' icon={faGithub} /></a>
       </div>
       </div>

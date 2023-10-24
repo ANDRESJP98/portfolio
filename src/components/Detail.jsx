@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import projectsData from "../data";
 import { Link } from "react-router-dom";
@@ -12,6 +11,7 @@ export default function Detail() {
   if (!project) {
     return <div>Project not found.</div>;
   }
+  const videoUrl = project.video ? project.video : project.youtubeLink;
 
   return (
     <div className="container mx-auto font-family-arial text-center">
@@ -30,26 +30,26 @@ export default function Detail() {
       <div className="flex flex-col sm:flex-row">
         <div className="mt-10 sm:w-full md:w-1/2">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-light text-black">
-            Would you like to check out the website?<br />Click on the button below to explore!
+            Would you like to see a description of the website?<br />Check my video!
           </p>
-          <a href={project.websiteLink} className="flex flex-col items-center p-5">
-            <button className="bg-white py-2 px-4 text-xs sm:text-sm md:text-base lg:text-lg rounded border-2 border-black">
-              <h1 className="text-black font-bold">Check the Website</h1>
-            </button>
-          </a>
-          <div className="mx-auto m-4 w-80">
-            <Carousel>
-              {project.images?.map((image, index) => (
-                <div key={index}>
-                  <img
-                    className="object-cover rounded-lg w-full max-w-xs"
-                    src={image}
-                    alt={`Imagen ${index}`}
-                  />
-                </div>
-              ))}
-            </Carousel>
-          </div>
+          {project.video ? (
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '50px' }}>
+    <video controls width="420" height="300">
+      <source src={project.video} type="video/mp4" />
+    </video>
+  </div>
+) : (
+  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '70px' }}>
+    <a href={videoUrl} target="_blank" rel="noopener noreferrer">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png"
+        alt="YouTube Icon"
+        width="160"
+        height="160"
+      />
+    </a>
+  </div>
+)}
           <div className="flex items-center justify-center -mt-6">
             <h1 className="text-3xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-black">
               GitHub
