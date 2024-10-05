@@ -1,0 +1,41 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .carousel-icon {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .carousel-arrow {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carousel-arrow svg {
+    color: #461E7D;
+  }
+  
+  .carousel-arrow:hover svg {
+    color: #563d8d;
+  }
+  

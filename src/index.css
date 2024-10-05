@@ -1,4 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Arial';
+  src: url('path/to/your/arial/font.woff2') format('woff2');
+}
+
+.font-arial {
+  font-family: 'Arial', sans-serif;
+}
+
 @import '~@fortawesome/fontawesome-free/css/all.css';

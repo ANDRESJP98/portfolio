@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './components/Home';
+import All from './components/All';
 import Detail from './components/Detail';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ return (
 
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<All />} />
       <Route path="/:projectId" element={<Detail />} />
     </Routes>
   </BrowserRouter>

@@ -1,8 +1,9 @@
+
 import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import cvFile from '../assets/CV Andres Jose Paternina Rubiano En.pdf'
+import { faWhatsapp, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import cvFile from '../assets/CV ANDRES RUBIANO.pdf'
 import Swal from 'sweetalert2';
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
@@ -53,8 +54,8 @@ function Contact (){
     return (
         <section id="contact" className="min-h-auto flex flex-col sm:flex flex-col md:flex-row items-center justify-center mt-20">
             <form className="flex flex-col bg-white rounded-2xl border-2 border-black p-10 mb-10 sm:mb-10 sm:mr-10 ml-0 sm:ml-10 md:ml-0">
-        <h1 className="font-bold mb-2 text-7xl text-black">Contact</h1>
-        <h1 className="mb-8 text-1xl text-black">Let's connect each other</h1>
+        <h1 className="font-bold mb-2 text-7xl">Contact</h1>
+        <h1 className="mb-8 text-1xl text-black">Lets connect each other</h1>
         <input
           placeholder='Name'
           className={`mb-5 h-8 border-2 border-black rounded-md ${name ? '' : 'border-red-500'}`}
@@ -77,7 +78,8 @@ function Contact (){
           onChange={(e) => setMessage(e.target.value)}
         />
         <button
-          className="bg-blue-600 hover:bg-blue-700 text-white text-1xl font-bold py-2 rounded"
+        style={{ backgroundColor: '#461E7D' }} 
+          className="hover:bg-blue-700 text-white text-1xl font-bold py-2 rounded"
           onClick={(e) => {
             e.preventDefault(); 
             handleSubmit();
@@ -90,7 +92,7 @@ function Contact (){
           <div className="flex flex-col items-center mb-10">
           <h1 className="text-5xl text-black font-bold -mb-4">CV</h1>
           <h1 className="text-2xl mt-5 font-light text-black">Do you want to checkout my cv?</h1>
-          <button className="bg-blue-600 py-2 px-4 text-white text-1xl font-bold py-2  rounded mt-4" onClick={handleDownload}>
+          <button style={{ backgroundColor: '#461E7D' }}  className="py-2 px-4 text-white text-1xl font-bold py-2  rounded mt-4" onClick={handleDownload}>
           <h1 className="text-1xl text-white font-bold ">Download</h1></button>
           </div>
           <hr className="border-t-4 border-black  w-full" />
@@ -100,12 +102,10 @@ function Contact (){
             <div className="mt-4">
               <a href='https://api.whatsapp.com/send?phone=573502018139&text=¡Hello! ¿How are you Andres?'
               target="_blank" rel="noopener noreferrer">   
-              <FontAwesomeIcon size='4x' className='m-3' icon={faWhatsapp} /></a>
-              <a href='https://www.linkedin.com/in/andresjosepaterninarubiano-fullstackdeveloper/'
+              <FontAwesomeIcon size='4x' className='m-3' icon={faWhatsapp} style={{ color: '#461E7D' }} /></a>
+              <a href='https://www.linkedin.com/in/andresjosepaterninarubiano-productmanager/'
               target="_blank" rel="noopener noreferrer">   
-              <FontAwesomeIcon size='4x' className='m-3' icon={faLinkedin} /></a>
-              <a href='https://github.com/ANDRESJP98' target="_blank" rel="noopener noreferrer">  
-              <FontAwesomeIcon size='4x' className='m-3' icon={faGithub} /></a>
+              <FontAwesomeIcon size='4x' className='m-3' icon={faLinkedin} style={{ color: '#461E7D' }} /></a>
       </div>
       </div>
     </div>
