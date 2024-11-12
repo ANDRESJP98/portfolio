@@ -19,7 +19,7 @@ function Projects() {
           <h1 className="text-3xl sm:text-4xl md:text-2xl lg:text-3xl font-bold text-black">{project.title}</h1>
           <img alt={project.title} className="mt-4 w-100 h-40 object-cover" src={project.imgSrc[0]} />
           <h2 className="text-xs sm:text-xs md:text-md lg:text-md font-light text-black mt-1">{project.overview}</h2>
-          <Link to={`/${project.id}`}>
+          <Link to={`/project/${project.id}`}>
           <button className="mt-4 border-2 border-[#461E7D] text-[#461E7D] px-6 py-2 text-sm font-bold uppercase hover:bg-[#461E7D] hover:text-white transition-colors w-full">
                 View More
               </button></Link>

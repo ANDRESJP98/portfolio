@@ -30,8 +30,8 @@ export default function Nav() {
       setActiveButton("skills");
     } else if (scrollPosition >= projectsOffset && scrollPosition < caseStudiesOffset* 3 / 2) {
       setActiveButton("work");
-     /* else if (scrollPosition >= caseStudiesOffset && scrollPosition < contactOffset * 3 / 2) {
-      setActiveButton("case-studies"); */
+    }else if (scrollPosition >= caseStudiesOffset && scrollPosition < contactOffset * 3 / 2) {
+      setActiveButton("case-studies"); 
     } else if (scrollPosition >= contactOffset + contactSection.offsetHeight - windowHeight) {
       setActiveButton("contact");
     }
@@ -131,7 +131,7 @@ export default function Nav() {
           >
             <a href="#skills">Skills</a>
           </button>
-          {/* <button
+          <button
             onClick={() => handleClick("case-studies")}
             className={`${
               activeButton === "case-studies"
@@ -140,7 +140,7 @@ export default function Nav() {
             } hover:text-white`}
           >
             <a href="#case-studies">Case Studies</a>
-          </button> */}
+          </button>
 
           <button
             onClick={() => handleClick("contact")}

@@ -18,7 +18,7 @@ export default function All(){
           <About/>
           <Projects/>
           <Skills/>
-          {/* <CaseStudies/> */}
+          <CaseStudies/> 
           <Contact/>
       </div>
     
