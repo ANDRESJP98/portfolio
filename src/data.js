@@ -12,10 +12,10 @@ import Data from './assets/Data.png'
 import Solicitud from './assets/Solicitud.png'
 import Admin from './assets/Admin.png'
 import Automatizaciontarifas from './assets/Automatizacion tarifas.png'
-import pythonWeb from './assets/pythonWeb.png'
+import pythonWeb from './assets/Python.png'
 import NPS from "./assets/NPS.png"
-import pageViews from './assets/pageViews.png'
-import Efficiency from './assets/efficiency.png'
+import pageViews from './assets/Pageviews.png'
+import Efficiency from './assets/Efficiency.png'
 
 const projectsData = [
   {
