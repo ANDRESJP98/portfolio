@@ -16,7 +16,7 @@ function Home() {
         {/* Sección de Texto */}
         <div className="flex-grow w-full md:w-3/5 relative mt-2 sm:mt-4 md:mt-8 text-left">
           <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl text-black font-bold font-montserrat">
-            Hi, I'm <span className="typing-text" style={{ color: '#461E7D' }}>Andres</span>
+          Hi, I'm <span  style={{ color: '#461E7D', display: 'inline-block' }}>Andres</span>
           </h1>
           <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl text-black font-bold font-montserrat">
             Product Manager 
