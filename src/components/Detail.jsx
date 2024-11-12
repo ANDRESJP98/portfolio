@@ -7,7 +7,6 @@ import { faArrowLeft, faArrowRight, faHome } from '@fortawesome/free-solid-svg-i
 export default function Detail() {
   const { projectId } = useParams();
   const project = projectsData.find((item) => item.id === projectId);
-
   const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!project) {
@@ -27,9 +26,9 @@ export default function Detail() {
       {/* Back to Home Button */}
       <div className="flex justify-start mt-4 sm:mt-6 ml-4 sm:ml-8 md:ml-12 lg:ml-16">
         <Link to="/" className="group flex items-center space-x-2">
-          {/* Icono con Texto */}
           <FontAwesomeIcon 
-            icon={faHome} style={{ color: '#461E7D' }}
+            icon={faHome} 
+            style={{ color: '#461E7D' }}
             className="group-hover:text-gray-300 transition duration-200 ease-in-out" 
             size="2x" 
           />
@@ -50,35 +49,41 @@ export default function Detail() {
       <div style={{ backgroundColor: '#461E7D' }} className="w-full mt-8 py-14">
         <div className="max-w-screen mx-auto flex flex-row items-center justify-between">
           {/* Left Arrow */}
-          <button onClick={handlePrev} className="m-8 text-white focus:outline-none">
-            <FontAwesomeIcon icon={faArrowLeft} size="3x" /> {/* Tamaño más grande */}
+          <button onClick={handlePrev} className="m-4 sm:m-6 lg:m-8 text-white focus:outline-none">
+            <FontAwesomeIcon 
+              icon={faArrowLeft} 
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl" 
+            />
           </button>
 
           {/* Image and Text Section */}
           <div className="flex flex-col sm:flex-row items-center justify-center sm:w-4/5 mx-auto space-x-8">
             {/* Image Section */}
             <div className="w-full sm:w-4/5">
-  <img
-    src={project.imgSrc[currentSlide]}
-    alt={`Slide ${currentSlide}`}
-    className="w-[600px] h-[350px] object-cover rounded-lg shadow-2xl" // Fixed size and object-cover to maintain aspect ratio
-  />
-</div>
+              <img
+                src={project.imgSrc[currentSlide]}
+                alt={`Slide ${currentSlide}`}
+                className="w-full h-auto sm:w-[400px] md:w-[500px] lg:w-[600px] max-h-[350px] object-cover rounded-lg shadow-2xl"
+              />
+            </div>
             
             {/* Text Section */}
-            <div className="sm:w-2/5 text-left">
+            <div className="sm:w-2/5 mt-8 sm:mt-0 text-left">
               <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4">
                 {project.texts[currentSlide].feature}
               </h2>
-              <p className="text-xs sm:text-s md:text-md lg:text-base font-light text-white">
+              <p className="text-xs sm:text-sm md:text-md lg:text-base font-light text-white">
                 {project.texts[currentSlide].description}
               </p>
             </div>
           </div>
 
           {/* Right Arrow */}
-          <button onClick={handleNext} className="m-8 text-white focus:outline-none">
-            <FontAwesomeIcon icon={faArrowRight} size="3x" />
+          <button onClick={handleNext} className="m-4 sm:m-6 lg:m-8 text-white focus:outline-none">
+            <FontAwesomeIcon 
+              icon={faArrowRight} 
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl" 
+            />
           </button>
         </div>
       </div>

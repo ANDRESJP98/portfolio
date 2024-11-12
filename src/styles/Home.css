@@ -9,19 +9,7 @@
     transform: translateY(0);
   }
 }
-.typing-text {
-  display: inline-block; /* Mantiene el texto en la misma línea */
-  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
-  border-right: 2px solid; /* Simula el cursor de escritura */
-  width: 6ch; /* Ajusta el ancho para "Andres" */
-  animation: typing 1s steps(6), blink 0.75s step-end infinite alternate; /* Cambia el número de pasos a 6 */
-  overflow: hidden; /* Oculta el texto que aún no ha sido escrito */
-  vertical-align: baseline; /* Alinea verticalmente el texto para evitar saltos de línea */
-}
 
-@keyframes typing {
-from { width: 0; /* Hacer que la barra de escritura desaparezca */}
-}
 
 /* Animación del color del nombre */
 @keyframes blink {

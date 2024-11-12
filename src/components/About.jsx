@@ -23,7 +23,7 @@ function About() {
         {/* Imagen ocupando la mitad del div */}
         
         </div>
-        <div className="w-full md:w-3/5">
+        <div className="w-full md:w-3/5 lg:block hidden h-full">
             <img
               src={Aboutme}
               alt="AI Innovation Icon"

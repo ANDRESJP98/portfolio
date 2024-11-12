@@ -43,10 +43,11 @@ const Carousel = ({ items }) => {
 const Skills = () => {
   return (
     <section id="skills" className="min-h-auto flex flex-col items-center py-10" style={{ backgroundColor: '#F8F9FA', color: '#461E7D' }}>
-      <div className="container mx-auto  mt-8 sm:mt-15 text-center">
+      <div className="container mx-auto mt-8 sm:mt-15 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">Skills</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        {/* Usamos grid-cols-1 para mostrar las cartas en una columna en pantallas pequeñas, y grid-cols-3 para mostrar las cartas en fila en pantallas grandes */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Card de Certificates */}
           <div className="bg-white shadow-lg rounded-lg p-6 relative transform transition-transform duration-300 hover:scale-105">
             <h2 className="text-3xl font-bold mb-4">Certificates</h2>
