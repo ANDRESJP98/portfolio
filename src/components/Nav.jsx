@@ -10,14 +10,14 @@ export default function Nav() {
     const projectsSection = document.getElementById("work");
     const contactSection = document.getElementById("contact");
     const skillsSection = document.getElementById("skills");
-   /*  const caseStudiesSection = document.getElementById("case-studies"); */
+    const caseStudiesSection = document.getElementById("case-studies");
 
     const homeOffset = homeSection.getBoundingClientRect().top;
     const aboutOffset = aboutSection.getBoundingClientRect().top;
     const projectsOffset = projectsSection.getBoundingClientRect().top;
     const contactOffset = contactSection.getBoundingClientRect().top;
     const skillsOffset = skillsSection.getBoundingClientRect().top;
-   /*  const caseStudiesOffset = caseStudiesSection.getBoundingClientRect().top; */
+    const caseStudiesOffset = caseStudiesSection.getBoundingClientRect().top;
 
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
@@ -28,9 +28,9 @@ export default function Nav() {
       setActiveButton("about");
     } else if (scrollPosition >= skillsOffset && scrollPosition < projectsOffset * 3 / 2) {
       setActiveButton("skills");
-    } else if (scrollPosition >= projectsOffset && scrollPosition < caseStudiesOffset* 3 / 2) {
+    } else if (scrollPosition >= projectsOffset && scrollPosition < caseStudiesOffset * 3 / 2) {
       setActiveButton("work");
-    }else if (scrollPosition >= caseStudiesOffset && scrollPosition < contactOffset * 3 / 2) {
+    } else if (scrollPosition >= caseStudiesOffset && scrollPosition < contactOffset * 3 / 2) {
       setActiveButton("case-studies"); 
     } else if (scrollPosition >= contactOffset + contactSection.offsetHeight - windowHeight) {
       setActiveButton("contact");
@@ -51,23 +51,22 @@ export default function Nav() {
 
   const handleClick = (button) => {
     setActiveButton(button);
-    setShowNav(false); // Close the navigation menu after clicking a button
+    setShowNav(false); // Cierra el menú después de hacer clic en una opción
   };
 
   return (
     <div style={{ backgroundColor: '#461E7D' }} className="fixed top-0 left-0 w-full z-50 shadow">
-      
       <div className="flex justify-between items-center px-6 py-4">
         
-        {/* Left Section with Name */}
-        <h1 className="text-white text-2xl md:text-3xl font-bold font-montserrat">
+        {/* Nombre */}
+        <h1 className="text-white text-xl sm:text-xl md:text-xl lg:text-3xl font-bold font-montserrat">
           Andres Rubiano
         </h1>
 
-        {/* Hamburger Menu (for mobile) */}
+        {/* Botón para desplegar lista en móvil (ícono de menú tipo hamburguesa) */}
         <button
           onClick={() => setShowNav(!showNav)}
-          className="block sm:hidden bg-white text-white font-bold py-4 px-4"
+          className="block sm:hidden text-white font-bold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -85,11 +84,11 @@ export default function Nav() {
           </svg>
         </button>
 
-        {/* Navigation Links */}
+        {/* Lista desplegable en móvil */}
         <nav
           className={`${
             showNav ? "block" : "hidden"
-          } sm:flex space-x-6 text-lg font-montserrat font-bold transition-all duration-300`}
+          } absolute top-full left-0 w-full sm:relative sm:flex sm:w-auto sm:space-x-6 text-base sm:text-sm md:text-lg lg:text-lg font-montserrat font-bold transition-all duration-300 bg-[#461E7D] sm:bg-transparent p-7 py-0 sm:p-0`}
         >
           <button
             onClick={() => handleClick("home")}
@@ -97,7 +96,7 @@ export default function Nav() {
               activeButton === "home"
                 ? "text-white"
                 : "text-gray-300"
-            } hover:text-white`}
+            } hover:text-white block text-left sm:inline`}
           >
             <a href="#home">Home</a>
           </button>
@@ -107,7 +106,7 @@ export default function Nav() {
               activeButton === "about"
                 ? "text-white"
                 : "text-gray-300"
-            } hover:text-white`}
+            } hover:text-white block text-left sm:inline`}
           >
             <a href="#about">About</a>
           </button>
@@ -117,7 +116,7 @@ export default function Nav() {
               activeButton === "work"
                 ? "text-white"
                 : "text-gray-300"
-            } hover:text-white`}
+            } hover:text-white block text-left sm:inline`}
           >
             <a href="#work">Work</a>
           </button>
@@ -127,7 +126,7 @@ export default function Nav() {
               activeButton === "skills"
                 ? "text-white"
                 : "text-gray-300"
-            } hover:text-white`}
+            } hover:text-white block text-left sm:inline`}
           >
             <a href="#skills">Skills</a>
           </button>
@@ -137,18 +136,17 @@ export default function Nav() {
               activeButton === "case-studies"
                 ? "text-white"
                 : "text-gray-300"
-            } hover:text-white`}
+            } hover:text-white block text-left sm:inline`}
           >
             <a href="#case-studies">Case Studies</a>
           </button>
-
           <button
             onClick={() => handleClick("contact")}
             className={`${
               activeButton === "contact"
                 ? "text-white"
                 : "text-gray-300"
-            } hover:text-white`}
+            } hover:text-white block text-left sm:inline`}
           >
             <a href="#contact">Contact</a>
           </button>
