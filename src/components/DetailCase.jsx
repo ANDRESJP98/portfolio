@@ -7,7 +7,6 @@ import { faArrowLeft, faArrowRight, faHome } from '@fortawesome/free-solid-svg-i
 export default function DetailCase() {
   const { projectCaseId } = useParams();
   const project = projectsDataCase.find((item) => item.id === projectCaseId);
-  print(project)
 
   const [currentSlide, setCurrentSlide] = useState(0);
 

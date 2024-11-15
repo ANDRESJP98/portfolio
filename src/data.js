@@ -1,6 +1,10 @@
 import EnelXCol from './assets/Enel X Colombia.png'
 import Simulator from './assets/Simulator.png'
 import SimulatorBr from './assets/SimulatorBr.png'
+import UserBr from './assets/UsersBr.png'
+import BillsBr from './assets/BillsBr.png'
+import Resume from './assets/Resume.png'
+import ComsuptionBr from './assets/ComsuptionsBr.png'
 import AWS from "./assets/AWS.png"
 import React from './assets/React.png'
 import Overview from './assets/Overview.png'
@@ -20,7 +24,7 @@ import pythonWeb from './assets/Python.png'
 import NPS from "./assets/NPS.png"
 import pageViews from './assets/Pageviews.png'
 import Efficiency from './assets/Efficiency.png'
-
+import AdminBr from './assets/AdminBr.png'
 const projectsData = [
   {
     id: "Enel X Colombia",
@@ -128,13 +132,13 @@ const projectsData = [
     },
     {
       id: "Enel Brasil",
-      imgSrc: [EnelXBra, SimulatorBr],
+      imgSrc: [EnelXBra, SimulatorBr, Resume, ComsuptionBr, BillsBr, UserBr, AdminBr, pythonWeb, React,AWS, Efficiency,Efficiency],
       title: "Enel Brasil",
-      overview: "Responsive E-commerce website created for Teesa S.A.S., a company dedicated to the commercialization of food equipment",
+      overview: "Enel Digital Retailer Brasil, a leader in digital energy commercialization for B2B and B2C clients, revolutionizes energy management with a state-of-the-art platform. We offer competitive rates and real-time consumption data, empowering large companies to make smarter, data-driven energy decisions.",
       texts: [
         {
           feature: 'Context of the Company',
-          description: "As a key player in Colombia's B2B energy sector, Enel X Colombia leverages technology to commercialize energy efficiently. Our platform is designed to empower clients by offering dynamic data insights into their energy usage, enabling significant cost savings and energy management optimization.",
+          description: "As a key player in Brasil's energy sector, Enel Brasil leverages technology to commercialize energy efficiently. Our platform is designed to empower clients by offering dynamic data insights into their energy usage, enabling significant cost savings and energy management optimization.",
         },
         {
           feature: 'Simulator for Competitor Rate Comparison',
@@ -142,7 +146,7 @@ const projectsData = [
         },
         {
           feature: 'Consumption Overview',
-          description: "In the private zone, clients can access a summary of their energy consumption, including how much they're saving with Enel X, and view details like high-consumption accounts and peak usage hours.",
+          description: "In the private zone, clients can access a summary of their energy consumption, including how much they're saving with Enel, and view details like high-consumption accounts.",
         },
         {
           feature: 'Detailed Consumption Tracking',
@@ -153,46 +157,27 @@ const projectsData = [
           description: "Users can view all past bills, including payment dates, amounts, methods, and banks used, allowing for easy tracking of financial transactions across accounts.",
         },
         {
-          feature: 'Payment Module',
-          description: "A module is available for clients to pay current bills directly through the platform, simplifying the payment process and improving user convenience.",
-        },
-        {
           feature: 'User and Access Management',
           description: "Clients can create multiple users within the platform and assign specific permissions, enhancing security and ensuring that roles are clearly defined.",
         },
         {
-          feature: 'API Integration',
-          description: "The platform allows for API access, enabling clients to automatically receive real-time consumption and billing data to integrate into their internal systems for more accurate financial planning.",
-        },
-        {
-          feature: 'Data Analysis Module',
-          description: "A module dedicated to in-depth data analysis helps clients understand the reasons behind their energy consumption patterns and make decisions to reduce costs.",
-        },
-        {
-          feature: 'PQRS and Savings Analysis',
-          description: "Clients can submit inquiries, requests, and complaints (PQRS), while a savings module compares their current costs to competitors, further emphasizing the platform's cost-effectiveness.",
-        },
-        {
           feature: 'Admin Dasboard',
-          description: "Admins can oversee transaction history, user management, NPS scores, and analyze client behaviors, helping improve the company's services and user satisfaction.",
+          description: "Admins can oversee user management, and analyze client behaviors, helping improve the company's services and user satisfaction.",
         },
         {feature: 'Tech Stack Overview',
-          description: "The Enel X Colombia platform was developed using a robust tech stack that includes React for the front end and Python for the back end, facilitating efficient management of real-time consumption data and energy simulations. This combination enhances user experience and service delivery.",
+          description: "The Enel Brasil Digital Retaile platform was developed using a robust tech stack that includes React for the front end and Python for the back end, facilitating efficient management of real-time consumption data and energy simulations. This combination enhances user experience and service delivery.",
         },
         {feature: 'Tech Stack Overview',
           description: "Our infrastructure is built on AWS, utilizing services such as Lambda for serverless computing and S3 for scalable storage solutions. The implementation of Adobe Experience Manager (AEM) further allows us to manage and optimize digital content effectively, providing seamless integration with our services.",
         },
         {feature: 'Tech Stack Overview',
-          description: "The project team consisted of a diverse group of specialists, including one Senior Front-End Developer, one Senior Back-End Developer, one DevOps Engineer, one Infrastructure Engineer (AWS expert), one UX/UI Designer, one AEM Developer, and myself as the Product Manager. This collaborative effort resulted in a scalable architecture that has drawn interest from other Enel countries seeking to replicate our success across Latin America.",
+          description: "The project team consisted of a diverse group of specialists, including one Senior Front-End Developer, one Senior Back-End Developer, one DevOps Engineer, one Infrastructure Engineer (AWS expert), one UX/UI Designer, one AEM Developer, one Project Manager and myself as the Product Manager. This collaborative effort resulted in a scalable architecture that has drawn interest from other Enel countries seeking to replicate our success across Latin America.",
         },
         {feature: 'Outcomes',
-          description: "The Enel X Colombia platform achieved significant growth in key business metrics, with website views per semester rising dramatically from 46,000 to 141,000. This increase demonstrates the effectiveness of our digital marketing strategies and user engagement initiatives, successfully attracting a wider audience.",
+          description: "Customer support incidents were reduced from 72 to fewer than 12, showcasing our commitment to service excellence and reliability. This reduction in incidents reflects the platform's stability and performance, enhancing our reputation in the market.",
         },
         {feature: 'Outcomes',
-          description: "Customer support incidents were reduced from 40 to fewer than 5, showcasing our commitment to service excellence and reliability. This reduction in incidents reflects the platform's stability and performance, enhancing our reputation in the market.",
-        },
-        {feature: 'Outcomes',
-          description: "Client satisfaction reached a remarkable score of 9 out of 10, as measured by our NPS module. This indicates that technological improvements in our offerings were a top priority for our clients. Furthermore, our innovative energy simulator became a key differentiator, empowering clients to analyze competitor rates and project potential savings, thereby attracting new contracts and driving revenue growth throughout Latin America.",
+          description: "Client satisfaction reached a remarkable score of 9.2 out of 10, as measured by different surveys sent from the marketing team. This indicates that technological improvements in our offerings were a top priority for our clients. Furthermore, our innovative energy simulator became a key differentiator, empowering clients to analyze competitor rates and project potential savings, thereby attracting new contracts and driving revenue growth throughout Latin America.",
         }]},
     {
       id: "RateBot",

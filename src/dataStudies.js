@@ -6,7 +6,7 @@ import AzureCognitive from './assets/AzureCognitive.png';
 const projectsDataCase = [
   {
     id: "Microsoft Copilot",
-    imgSrc: [Copilot],
+    imgSrc: [Copilot, Copilot, Copilot, Copilot, Copilot, Copilot, Copilot],
     title: "Microsoft Copilot",
     overview: "Microsoft Copilot, powered by OpenAI's GPT-4, integrates into Microsoft 365 applications to enhance productivity. It assists with automating repetitive tasks, providing content generation, and delivering insights in tools like Word, Excel, and PowerPoint. Copilot is designed to help users create, analyze, and collaborate more efficiently.",
     texts: [
@@ -42,7 +42,7 @@ const projectsDataCase = [
   },
   {
     id: "Microsoft Power Virtual Agents",
-    imgSrc: [PowerAgents],
+    imgSrc: [PowerAgents, PowerAgents, PowerAgents, PowerAgents, PowerAgents, PowerAgents, PowerAgents, PowerAgents],
     title: "Microsoft Power Virtual Agents",
     overview: "Microsoft Power Virtual Agents enables users to build AI-powered chatbots using a no-code interface. It integrates with Azure OpenAI Service and Microsoft’s broader Power Platform, allowing for automation and enhanced workflows without requiring deep technical expertise.",
     texts: [
@@ -82,7 +82,7 @@ const projectsDataCase = [
   },
   {
     id: "Azure Cognitive Services",
-    imgSrc: [AzureCognitive],
+    imgSrc: [AzureCognitive, AzureCognitive, AzureCognitive, AzureCognitive, AzureCognitive, AzureCognitive, AzureCognitive, AzureCognitive],
     title: "Azure Cognitive Services",
     overview: "Azure Cognitive Services offer a suite of pre-built AI models for vision, speech, language, and decision-making. These services help developers add intelligent features such as facial recognition, speech-to-text, and natural language processing (NLP) into their applications, powered by custom-trained Azure LLMs and OpenAI models.",
     texts: [
@@ -122,7 +122,7 @@ const projectsDataCase = [
   },
   {
     id: "Google Dialogflow",
-    imgSrc: [Dialogflow],
+    imgSrc: [Dialogflow, Dialogflow, Dialogflow, Dialogflow, Dialogflow, Dialogflow, Dialogflow, Dialogflow, Dialogflow],
     title: "Google Dialogflow",
     overview: "Google Dialogflow CX is Google Cloud’s NLP-based conversational AI platform for building chatbots and virtual agents. It provides advanced natural language processing and multi-turn conversation handling, enabling rich, engaging, and accurate interactions for customer service and other use cases.",
     texts: [
