@@ -22,7 +22,7 @@ function Home() {
             Product Manager 
           </h1>
           <h3 className="text-sm sm:text-base md:text-sm lg:text-base mt-5 font-light text-black">
-            With over 2 years of experience in AI and software development, I specialize in leading cross-functional teams to design and implement innovative, customer-focused solutions. My expertise includes managing MVPs, crafting detailed requirements, and driving product growth through strategic analysis.
+            With over 3 years of experience in AI and software development, I specialize in leading cross-functional teams to design and implement innovative, customer-focused solutions. My expertise includes managing MVPs, crafting detailed requirements, and driving product growth through strategic analysis.
           </h3>
 
           {/* Contenedor Flex para Botón e Iconos */}

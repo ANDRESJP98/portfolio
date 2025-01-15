@@ -13,10 +13,10 @@ function About() {
             I’m a Product Manager with experience in AI and software development. Over the years, I have successfully led cross-functional teams to create innovative, customer-focused solutions. My experience spans MVP management, detailed product requirements, and driving product growth.
           </p>
           <p className="text-sm sm:text-sm md:text-base base:text-base font-light text-black mt-3">
-            I’m passionate about using AI and software development to solve real-world problems. I’ve worked on various AI-driven projects, including launching Colombia's first AI-driven chatbot and leading MVP integrations across Latin America, boosting customer satisfaction and operational efficiency.
+            I’m passionate about using AI and software development to solve real-world problems. I’ve worked on various AI-driven projects, including launching Colombia's first AI-driven chatbot in the Energy industry and leading MVP integrations across Latin America, boosting customer satisfaction and operational efficiency.
           </p>
           <p className="text-sm sm:text-sm md:text-base base:text-base font-light text-black mt-3">
-            My approach is rooted in user-centric design and data-driven decision-making. I thrive in collaborative environments, consistently delivering scalable, impactful solutions that align with both user needs and business goals. I’m skilled in Python, TensorFlow, machine learning, and agile methodologies, and I regularly leverage tools like Jira, Trello, and Figma to optimize product development.
+            My approach is rooted in user-centric design and data-driven decision-making. I thrive in collaborative environments, consistently delivering scalable, impactful solutions that align with both user needs and business goals. I regularly leverage tools like Jira, Trello, and Figma to optimize product development.
           </p>
         </div>
 
